@@ -14,7 +14,7 @@ https://hub.docker.com/repository/docker/shpboris/usersrestserver
 5. To deploy both MySql DB and users REST application to Kubernetes, make sure to have node named worker01 with /mnt/data directory in it.
 Then execute the following using files from src\main\resources\deployment folder of this project:
 
-  5.1 sudo kubectl apply -f secrets-and-config-maps.yml
+    5.1 sudo kubectl apply -f secrets-and-config-maps.yml
 
   5.2 sudo kubectl apply -f persistence-volume-deployment.yml
 
