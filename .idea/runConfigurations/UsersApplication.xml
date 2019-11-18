@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="UsersApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="users-app" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.users.UsersApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <envs>
+      <env name="MYSQL_USER" value="root" />
+      <env name="MYSQL_PASSWORD" value="change to usual one" />
+      <env name="MYSQL_URL" value="jdbc:mysql://localhost:3306/usersdb" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

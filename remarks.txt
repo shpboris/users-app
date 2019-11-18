@@ -1,0 +1,30 @@
+1.
+The application is based on Spring Boot and allows to manage users (CRUD operations) through Swagger UI.
+The users are saved in MySql database.
+
+2.
+To access the Swagger UI use this URL - http://localhost:8000/users-app/swagger-ui.html
+
+3.
+All the Kubernetes and Docker files are located at resources/deployment folder
+
+4.
+Possible content for application.properties without env variables
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/usersdb
+spring.datasource.username=root
+spring.datasource.password=the usual value
+
+In order to run with env variables, create the following env variables
+MYSQL_URL
+MYSQL_USER
+MYSQL_PASSWORD
+
+with corresponding values of
+
+jdbc:mysql://localhost:3306/usersdb
+root
+the usual value
