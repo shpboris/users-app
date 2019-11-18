@@ -16,9 +16,9 @@ Then execute the following using files from src\main\resources\deployment folder
 
     5.1 sudo kubectl apply -f secrets-and-config-maps.yml
 
-  5.2 sudo kubectl apply -f persistence-volume-deployment.yml
+    5.2 sudo kubectl apply -f persistence-volume-deployment.yml
 
-  5.3 sudo kubectl apply -f my-sql-deployment.yml
+    5.3 sudo kubectl apply -f my-sql-deployment.yml
 
-  5.4 sudo kubectl apply -f users-rest-server-deployment.yml
+    5.4 sudo kubectl apply -f users-rest-server-deployment.yml
 
