@@ -28,3 +28,22 @@ with corresponding values of
 jdbc:mysql://localhost:3306/usersdb
 root
 the usual value
+
+
+5.
+To expose the application using plain docker on port 8888, run the following:
+sudo docker run -d --name users-app-docker -e MYSQL_URL=jdbc:mysql://10.244.1.31:3306/users-db -e MYSQL_USER=shpboris -e MYSQL_PASSWORD=pass123 -p 8888:8000 shpboris/usersrestserver
+
+6.
+To deploy both MySql DB and users REST application to Kubernetes, make sure to have node
+named worker01 with /mnt/data directory in it. [The node name seems to be derived by Kubernetes from
+hostname declared in /etc/hostname]
+Then execute the following using files from users-app/src/main/resources/deployment/ folder of this project:
+
+6.1 sudo kubectl apply -f secrets-and-config-maps.yml
+
+6.2 sudo kubectl apply -f persistence-volume-deployment.yml
+
+6.3 sudo kubectl apply -f my-sql-deployment.yml
+
+6.4 sudo kubectl apply -f users-rest-server-deployment.yml
